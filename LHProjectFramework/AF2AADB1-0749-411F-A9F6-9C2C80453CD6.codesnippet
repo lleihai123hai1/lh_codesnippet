@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_signalForSelector</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    lh_signalForSelector(@selector(touchesBegan:withEvent:),^(RACTuple *tuple) {
+        NSLog(@"touchesBegan")
+    }).lh_signalForSelector(@selector(test),^(RACTuple *tuple) {
+        NSLog(@"test")
+    });</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>AF2AADB1-0749-411F-A9F6-9C2C80453CD6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_signalForSelector</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

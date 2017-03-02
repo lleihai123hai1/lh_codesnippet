@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_ UITextField</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(UITextField*)&lt;#textFiled#&gt;{
+    if(!_&lt;#textFiled#&gt;){
+        _&lt;#textFiled#&gt; = [UITextField return:^NSObject *(UITextField* value) {
+            return value
+            .lh_clickAction(^(UITextField *sender,NSString*value){
+                NSLog(@"%@",value);
+            })
+            .lh_backgroundColor(UIColor.lh_ff32ff)
+            .lh_layout(self.view,^(SDAutoLayoutModel *sd_layout){
+                sd_layout.leftSpaceToView(self.view,70)
+                .topSpaceToView(self.view,100)
+                .widthIs(140)
+                .heightIs(40);
+            });
+        }];
+    }
+    return _&lt;#textFiled#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>494BB740-1451-4B88-BDE3-F4D9859B4D83</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_ UITextField</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

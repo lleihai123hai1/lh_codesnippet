@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>NSLogS</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//    NSStringFromCGPoint
+//    NSStringFromCGSize
+//    NSStringFromCGRect
+//    NSStringFromCGAffineTransform
+//    NSStringFromUIEdgeInsets
+    CGRect rect1;
+    NSLog(@"rect1: %@", NSStringFromCGRect(rect1));</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>06FDA09A-3BE3-492E-8431-95801C2E7D6E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>NSLogS</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_ UIButton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(UIButton*)&lt;#button#&gt;{
+    if(!_&lt;#button#&gt;){
+        @weakify(self);//只能解决一层block 循环引用  若是多层必须添加@strongify(self); 然而 __weak typeof(self) weakSelf = self;  不存在此问题
+        _&lt;#button#&gt; = [UIButton return:^NSObject *(UIButton* value) {
+            return value
+            .lh_title(@"btn",UIControlStateNormal)
+            .lh_clickAction(^(UIButton *sender){
+                sender.width += 2;
+                NSLog(@"clickAction");
+                @strongify(self);
+                [(UIAlertView*)[UIAlertView return:^NSObject *(UIAlertView* value) {
+                    return value
+                    .lh_title(@"hello")
+                    .lh_message(@"good")
+                    .lh_btnTitle(@"ok1",nil)
+                    .lh_btnTitle(@"ok2",@"ok3",nil)
+                    .lh_btnTitle(LH_Valist(@"ok4",@"ok5"))
+                    .lh_btnTitle(LH_Valist(@"ok6",@"ok7",nil))
+                    .lh_clickAction(^(UIAlertView* value,NSInteger index){
+                        NSLog(@"UIAlertView:%ld",(long)index);
+                        self.lh_removeNotification(@"hello");
+                    });
+                }] show];
+            })
+            .lh_layout(self.view,^(SDAutoLayoutModel *sd_layout){
+                sd_layout.leftSpaceToView(self.view,10)
+                .topSpaceToView(self.view,100)
+                .widthIs(60)
+                .heightIs(40);
+            })
+            .lh_backgroundColor([UIColor redColor])
+            .lh_alpha(@(0.4))
+            .lh_layer_cornerRadius(@(10))
+            .lh_frame(CGRectMake(100, 200, 100, 100))
+            .lh_kvo(@"frame",^(id value){
+                NSLog(@"change_frame");
+            });
+        }];
+    }
+    return _&lt;#button#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>23DF6134-2C34-490E-8BC4-51E80CCD2C8F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_ UIButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_ UIImageView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(UIImageView*)&lt;#imageView#&gt;{
+    if(!_&lt;#imageView#&gt;){
+        _&lt;#imageView#&gt; = [UIImageView return:^NSObject *(UIImageView* value) {
+            return value
+            .lh_image([UIImage imageNamed:@"icon_ProRight2"])
+            .lh_layout(self.view,^(SDAutoLayoutModel *sd_layout){
+                sd_layout.leftEqualToView(self.lable)
+                .topSpaceToView(self.lable,10)
+                .widthIs(50)
+                .heightIs(50);
+            });
+;
+        }];
+    }
+    return _&lt;#imageView#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A0C239A4-FE7E-459C-9F65-C343B48444FB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_ UIImageView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

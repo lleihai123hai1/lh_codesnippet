@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_clickAction_UIButton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeExpression</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>lh_clickAction(^(UIButton *sender){
+                sender.width += 2;
+                NSLog(@"clickAction");
+                @strongify(self);
+                [(UIAlertView*)[UIAlertView return:^NSObject *(UIAlertView* value) {
+                    return value
+                    .lh_title(@"hello")
+                    .lh_message(@"good")
+                    .lh_btnTitle(@"ok1",nil)
+                    .lh_btnTitle(@"ok2",@"ok3",nil)
+                    .lh_btnTitle(LH_Valist(@"ok4",@"ok5"))
+                    .lh_btnTitle(LH_Valist(@"ok6",@"ok7",nil))
+                    .lh_clickAction(^(UIAlertView* value,NSInteger index){
+                        NSLog(@"UIAlertView:%ld",(long)index);
+                        self.lh_removeNotification(@"hello");
+                    });
+                }] show];
+            })
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1F644800-49F5-4C9B-896D-2CCDB540F4BA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_clickAction_UIButton</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

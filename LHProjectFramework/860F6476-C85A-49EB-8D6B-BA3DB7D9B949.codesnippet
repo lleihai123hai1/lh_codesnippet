@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_ UITableView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - tableview datasourece and delegate
+-(UITableView*)&lt;#table#&gt;{
+    if(!_&lt;#table#&gt;){
+        @weakify(self);
+        _&lt;#table#&gt; = [UITableView return:^NSObject *(UITableView* value) {
+            @strongify(self);
+            return value
+            .lh_delegateDataSource(self)
+            .lh_separatorStyle(UITableViewCellSeparatorStyleSingleLine)
+            .lh_style(UITableViewStyleGrouped)
+            .lh_style(UITableViewStylePlain)
+            .lh_separatorInset(UIEdgeInsetsZero)
+            .lh_numberOfRowsInSection(^(NSInteger index){
+                @strongify(self);
+                return self-&gt;_contenArray.count;
+            })
+            .lh_heightForRowAtIndexPath(^(NSIndexPath *indexPath){
+                @strongify(self);
+                return 30;
+            })
+            .lh_didSelectRowAtIndexPath(^(NSIndexPath *indexPath){
+                @strongify(self);
+                NSDictionary*dict = self-&gt;_contenArray[indexPath.row];
+                NSLog(@"%@",[dict strValue:@"title"])
+            })
+            .lh_cellForRowAtIndexPath(^(NSIndexPath *indexPath){
+                @strongify(self);
+                NSDictionary*dict = self-&gt;_contenArray[indexPath.row];
+                return [LhDemoCell getLhDemoCell:self.table dict:dict];
+            })
+            .lh_frame(self.view.bounds);
+        }];
+    }
+    return _&lt;#table#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>860F6476-C85A-49EB-8D6B-BA3DB7D9B949</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_ UITableView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

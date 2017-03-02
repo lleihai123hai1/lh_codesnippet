@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_ UILabel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(UILabel*)&lt;#lable#&gt;{
+    if(!_&lt;#lable#&gt;){
+        _&lt;#lable#&gt; = [UILabel return:^NSObject *(UILabel* value) {
+            return value
+            .lh_text(@"uilable -_click， me")
+            .lh_textColor([UIColor blackColor])
+            .lh_textAlignment(NSTextAlignmentCenter)
+            .lh_backgroundColor([UIColor whiteColor])
+            .lh_layout(self.view,^(SDAutoLayoutModel *sd_layout){
+                sd_layout.leftSpaceToView(self.textFiled,10)
+                .topEqualToView(self.textFiled)
+                .widthIs(150)
+                .heightIs(50);
+            })
+            .lh_gesture(1,1,^(id value){
+                [(UIAlertView*)[UIAlertView return:^NSObject *(UIAlertView* value) {
+                    return value
+                    .lh_title(@"hello")
+                    .lh_message(@"thanks click")
+                    .lh_btnTitle(LH_Valist(@"ok",nil))
+                    .lh_clickAction(^(UIAlertView* value,NSInteger index){
+                        NSLog(@"UIAlertView:%ld",(long)index);
+                    });
+                }] show];
+
+            });
+        }];
+    }
+    return _&lt;#lable#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9C326181-88F1-4824-8EDA-4C00EDD76EBD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_ UILabel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

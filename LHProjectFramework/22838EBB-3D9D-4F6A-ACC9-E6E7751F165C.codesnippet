@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_ UIImageView_</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(UIImageView*)&lt;#imageName#&gt;{
+    if(!_&lt;#imageName#&gt;){
+        _&lt;#imageName#&gt; = [UIImageView return:^NSObject *(UIImageView* value) {
+            return value
+            .lh_name(@"icon_ProRight2")
+            .lh_layout(self.view,^(SDAutoLayoutModel *sd_layout){
+                sd_layout.leftEqualToView(self.uiImageView)
+                .topSpaceToView(self.uiImageView,20)
+                .widthIs(40)
+                .heightIs(40);
+            })
+            .lh_gesture(1,1,^(id value){
+                [(UIAlertView*)[UIAlertView return:^NSObject *(UIAlertView* value) {
+                    return value
+                    .lh_title(@"hello")
+                    .lh_message(@"thanks click")
+                    .lh_btnTitle(LH_Valist(@"ok",nil))
+                    .lh_clickAction(^(UIAlertView* value,NSInteger index){
+                        NSLog(@"UIAlertView:%ld",(long)index);
+                    });
+                }] show];
+                
+            });
+        }];
+    }
+    return _&lt;#imageName#&gt;;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>22838EBB-3D9D-4F6A-ACC9-E6E7751F165C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_ UIImageView_</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

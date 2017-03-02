@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>lh_UICollectionView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark -UICollectionView Delegate and DataSource
+-(UICollectionView*)&lt;#collection#&gt;{
+    if(!_&lt;#collection#&gt;){
+        @weakify(self);
+        _&lt;#collection#&gt; = [UICollectionView return:^NSObject *(UICollectionView* value) {
+            @strongify(self);
+            return value
+            .lh_delegateDataSource(self)
+            .lh_collectionViewLayout(^(){
+                UICollectionViewFlowLayout * layout = [[UICollectionViewFlowLayout alloc]init];
+                //设置布局方向为垂直流布局
+                layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+                //设置每个item的大小为100*100
+                layout.itemSize = CGSizeMake(128, 128+52);
+                CGFloat widthDiff = (self.view.width-layout.itemSize.width*3)/4.0;
+                layout.sectionInset = UIEdgeInsetsMake(20,widthDiff, 20, widthDiff);
+                return layout;
+            })
+            .lh_registerClass([LhCollectionCell class])
+            .lh_numberOfItemsInSection(^(NSInteger index){
+                @strongify(self);
+                return self-&gt;_contenArray.count;
+            })
+            .lh_didSelectItemAtIndexPath(^(NSIndexPath *indexPath){
+                @strongify(self);
+                NSDictionary*dict = self-&gt;_contenArray[indexPath.row];
+                NSLog(@"%@",[dict strValue:@"title"])
+            })
+            .lh_cellForItemAtIndexPath(^(NSIndexPath *indexPath){
+                @strongify(self);
+                NSDictionary*dict = self-&gt;_contenArray[indexPath.row];
+                return [LhCollectionCell getLhCollectionCell:self.collection dict:dict indexPath:indexPath];
+            })
+            .lh_frame(self.view.bounds)
+            .lh_backgroundColor([UIColor whiteColor]);
+        }];
+    }
+    return _&lt;#collection#&gt;;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7C4B1270-A3A6-46C7-B411-B576798C6A95</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>lh_UICollectionView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

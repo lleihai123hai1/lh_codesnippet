@@ -10,6 +10,11 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>#pragma mark - tableview datasourece and delegate
+/**
+ &lt;#Description#&gt;
+ 
+ @return &lt;#return value description#&gt;
+ */
 -(UITableView*)&lt;#table#&gt;{
     if(!_&lt;#table#&gt;){
         @weakify(self);
@@ -53,6 +58,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

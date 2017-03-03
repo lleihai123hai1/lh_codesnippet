@@ -9,7 +9,12 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>-(UIImageView*)&lt;#imageView#&gt;{
+	<string>/**
+ &lt;#Description#&gt;
+ 
+ @return &lt;#return value description#&gt;
+ */
+-(UIImageView*)&lt;#imageView#&gt;{
     if(!_&lt;#imageView#&gt;){
         _&lt;#imageView#&gt; = [UIImageView return:^NSObject *(UIImageView* value) {
             return value
@@ -34,6 +39,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

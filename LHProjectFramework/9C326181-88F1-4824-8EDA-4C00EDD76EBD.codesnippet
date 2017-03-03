@@ -9,7 +9,12 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>-(UILabel*)&lt;#lable#&gt;{
+	<string>/**
+ &lt;#Description#&gt;
+ 
+ @return &lt;#return value description#&gt;
+ */
+-(UILabel*)&lt;#lable#&gt;{
     if(!_&lt;#lable#&gt;){
         _&lt;#lable#&gt; = [UILabel return:^NSObject *(UILabel* value) {
             return value
@@ -48,6 +53,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

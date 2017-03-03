@@ -9,7 +9,12 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>-(UIButton*)&lt;#button#&gt;{
+	<string>/**
+ &lt;#Description#&gt;
+ 
+ @return &lt;#return value description#&gt;
+ */
+-(UIButton*)&lt;#button#&gt;{
     if(!_&lt;#button#&gt;){
         @weakify(self);//只能解决一层block 循环引用  若是多层必须添加@strongify(self); 然而 __weak typeof(self) weakSelf = self;  不存在此问题
         _&lt;#button#&gt; = [UIButton return:^NSObject *(UIButton* value) {
@@ -59,6 +64,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

@@ -9,7 +9,12 @@
 		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>-(UITextView*)&lt;#textView#&gt;{
+	<string>/**
+ &lt;#Description#&gt;
+ 
+ @return &lt;#return value description#&gt;
+ */
+-(UITextView*)&lt;#textView#&gt;{
     if(!_&lt;#textView#&gt;){
         _&lt;#textView#&gt; = [UITextView return:^NSObject *(UITextField* value) {
             return value
@@ -36,6 +41,6 @@
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
